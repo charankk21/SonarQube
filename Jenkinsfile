@@ -12,7 +12,7 @@ pipeline{
             deleteDir()
             sh 'sudo git clone https://github.com/charankk21/SonarQube.git'
             
-            dir('simple-java-maven-app'){
+            dir('SonarQube'){
         	sh 'mvn sonar:sonar -Dsonar.projectKey=SonarTest -Dsonar.host.url=http://localhost:9000 -Dsonar.login=$SonarLogin$'
 	        }
             
