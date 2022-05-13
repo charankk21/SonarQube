@@ -7,5 +7,4 @@ stage('SAST-->SonarQube')
 	steps{
 		sh 'echo hello'
 		}
-    }
 }
