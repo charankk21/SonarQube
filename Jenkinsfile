@@ -1,6 +1,7 @@
 pipeline{
    
     agent any
+	stages{
 	stage('SAST-->SonarQube')
 		{
 			agent {label 'linagent'}
@@ -14,5 +15,6 @@ pipeline{
 				sh 'mvn sonar:sonar -Dsonar.projectKey=SonarTest -Dsonar.host.url=http://54.244.41.181:9000 -Dsonar.login=12a39a18aacff4ee3e3c8d425463919a5d5c7fd2'
 			}
 		}
+	}
 	}
 }
